@@ -4,6 +4,6 @@
 
 (define duple
   (lambda (n x)
-    (if (= n 0)
+    (if (zero? n)
         '()
         (cons x (duple (- n 1) x)))))
