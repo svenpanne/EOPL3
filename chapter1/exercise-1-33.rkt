@@ -6,7 +6,7 @@
   (lambda (b)
     (letrec ((loop (lambda (b red-depth)
                      (if (leaf? b)
-                         red-depth
+                         (leaf red-depth)
                          (let ((new-red-depth
                                 (+ red-depth
                                    (if (eqv? (contents-of b) 'red) 1 0))))
