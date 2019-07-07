@@ -44,3 +44,9 @@
     (if (is-zero?-bignum n)
         (successor-bignum (zero-bignum))
         (multiply n (factorial (predecessor-bignum n))))))
+
+; The execution time for computing the factorial of 10 doesn't vary very much
+; when the base N is changed, things get just a tiny bit faster when N grows.
+; The reason for this is that the algorithms in plus and multiply are so
+; inefficient that making the fundamental operations more or less efficient
+; doesn't have much impact.
